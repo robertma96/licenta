@@ -1,0 +1,307 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: whitesmoke;
+}
+
+body:after {
+    content: "";
+    position: fixed; /* stretch a fixed position to the whole screen */
+    top: 0;
+    height: 100vh; /* fix for mobile browser address bar appearing disappearing */
+    left: 0;
+    right: 0;
+    z-index: -1; /* needed to keep in the background */
+    background: linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.6)
+    ), url('background_images/background1.png') center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body > .container {
+    padding: 60px 15px 0;
+}
+
+.row .col-sm {
+    max-width: 400px;
+}
+
+#img_styled {
+    text-align: center;
+}
+
+.bg-dark {
+    background-color: #E15D44 !important;
+}
+
+.fotorama {
+    padding: 20px;
+}
+
+.numeuser {
+    font-weight: 500;
+}
+
+#submitforstyle {
+    text-align: center;
+    margin: 50px auto 50px auto;
+    display: block;
+    padding: 30px 50px 30px 50px;
+    font-size: 30px;
+    font-weight: 600;
+
+}
+
+.hidden_input {
+    visibility: hidden;
+}
+
+
+img#upload_placeholder {
+    margin-top: 75px;
+    visibility: hidden;
+    max-height: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+a {
+    font-weight: 500;
+    color: rgba(255, 255, 255, .5);
+}
+
+a:hover {
+    color: white;
+}
+
+.card-body {
+    color: black;
+}
+
+.card {
+    margin-bottom: 15px
+}
+
+.card.selected {
+    background-color: Dodgerblue;
+    transition: .5s ease;
+}
+
+.fas.fa-check-circle {
+    opacity: 0;
+    position: absolute;
+}
+
+.fas.fa-file-upload.fa-7x.box__icon {
+    padding: 25px;
+}
+
+.card.selected .fas.fa-check-circle {
+    opacity: 1;
+    position: absolute;
+    right: 0;
+    transition: .5s ease;
+    color: Dodgerblue;
+}
+
+#for_post {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+#img_styled {
+    margin: 30px;
+}
+
+.box__dragndrop {
+    display: none;
+}
+
+.box {
+    font-size: 1.25rem;
+    background-color: indianred;
+    position: relative;
+}
+
+.box__input {
+    text-align: center;
+}
+
+.box__button {
+    font-weight: 700;
+    color: #e5edf1;
+    background-color: #39bfd3;
+    display: block;
+    padding: 8px 16px;
+    margin: 0 auto 0;
+    border: 0;
+}
+
+.box__button.in-form {
+    display: none;
+}
+
+.box__file {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+.box__file + label {
+    max-width: 80%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.box__file + label:hover strong {
+    color: black;
+    transition: .3s ease;
+}
+
+.box__file + label strong {
+    transition: .3s ease;
+}
+
+.box__dragndrop {
+    cursor: pointer;
+}
+
+.box.has-advanced-upload {
+    outline: 2px dashed #92b0b3;
+    outline-offset: -10px;
+    -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    transition: outline-offset .15s ease-in-out, background-color .15s linear;
+    margin-top: 75px;
+    margin-bottom: 75px;
+}
+
+.box.has-advanced-upload .box__icon {
+    display: block;
+    margin-bottom: 0;
+}
+
+.box.has-advanced-upload p {
+    font-weight: 600;
+    text-align: center;
+}
+
+.box.has-advanced-upload .box__dragndrop {
+    display: inline;
+}
+
+.box.is-dragover {
+    background-color: #e5edf1;
+}
+
+.box.is-uploading .box__input {
+    visibility: hidden;
+}
+
+.box.is-uploading .box__uploading {
+    display: block;
+}
+
+.alert {
+    margin-top: 20px;
+}
+
+/*For Download Button*/
+.btn {
+    background-color: DodgerBlue;
+    border: none;
+    color: white;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+    background-color: RoyalBlue;
+}
+
+/*This is for line split*/
+.hr {
+    width: 100%;
+    height: 1px;
+    display: block;
+    position: relative;
+    margin-bottom: 0em;
+    padding: 2em 0;
+}
+
+.hr:after, .hr:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    bottom: 50%;
+    left: 0;
+}
+
+.hr:before {
+    background: linear-gradient(90deg, transparent 0%, transparent 50%, transparent 50%, transparent 100%);
+    background-size: 15px;
+    background-position: center;
+    z-index: 1;
+}
+
+.hr:after {
+    transition: opacity 0.3s ease, -webkit-animation 0.3s ease;
+    transition: opacity 0.3s ease, animation 0.3s ease;
+    transition: opacity 0.3s ease, animation 0.3s ease, -webkit-animation 0.3s ease;
+    background: linear-gradient(to right, #62efab 5%, #f2ea7d 15%, #f2ea7d 25%, #ff8797 35%, #ff8797 45%, #e1a4f4 55%, #e1a4f4 65%, #82fff4 75%, #82fff4 85%, #62efab 95%);
+    background-size: 200%;
+    background-position: 0%;
+    -webkit-animation: bar 15s linear infinite;
+    animation: bar 15s linear infinite;
+}
+
+@-webkit-keyframes bar {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 200%;
+    }
+}
+
+@keyframes bar {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 200%;
+    }
+}
+
+.hr.anim:before {
+    background: linear-gradient(90deg, #10111f 0%, #10111f 5%, transparent 5%, transparent 10%, #10111f 10%, #10111f 15%, transparent 15%, transparent 20%, #10111f 20%, #10111f 25%, transparent 25%, transparent 30%, #10111f 30%, #10111f 35%, transparent 35%, transparent 40%, #10111f 40%, #10111f 45%, transparent 45%, transparent 50%, #10111f 50%, #10111f 55%, transparent 55%, transparent 60%, #10111f 60%, #10111f 65%, transparent 65%, transparent 70%, #10111f 70%, #10111f 75%, transparent 75%, transparent 80%, #10111f 80%, #10111f 85%, transparent 85%, transparent 90%, #10111f 90%, #10111f 95%, transparent 95%, transparent 100%);
+    background-size: 150px;
+    background-position: center;
+    z-index: 1;
+    -webkit-animation: bar 120s linear infinite;
+    animation: bar 120s linear infinite;
+}
+
+.hr.anim:hover:before {
+    -webkit-animation-duration: 20s;
+    animation-duration: 20s;
+}
+
+.hr.anim:hover:after {
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+}

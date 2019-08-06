@@ -1,0 +1,14 @@
+{% extends 'det_style/layout.html' %}
+{% block content %}
+    <div class="fotorama" data-width="100%" data-height="85%">
+        {% for picture in my_pictures %}
+            <img src="{{ picture }}" height="100px">
+        {% endfor %}
+    </div>
+
+    {#    <div class="gallery">#}
+    {#        {% for picture in my_pictures %}#}
+    {#            <img src="{{ picture }}" width="300px" height="250px">#}
+    {#        {% endfor %}#}
+    {#    </div>#}
+{% endblock %}

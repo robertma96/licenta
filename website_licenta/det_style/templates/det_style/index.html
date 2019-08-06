@@ -1,0 +1,19 @@
+{% extends 'det_style/layout.html' %}
+{% block content %}
+    <h3>Welcome</h3>
+    <p>The first thing the app does is to identify the faces present in a photo. After that, it will apply the style of a famous picture selected by you.</p>
+    <p>
+        This is an application used for styling images (applying a filter). First step is to upload a photo that contains faces. <br>
+        After that you will need to select painting that you like the most (this will be the filter
+        you selected). After that you have to select one of the two modes: <br>Style only the faces OR Style only the background and not the faces
+        <br>
+    </p>
+    <p>So to recap:</p>
+    <ol>
+        <li><a href="{% url 'signup' %}">Create an account or log in</a> or <a href="{% url 'login' %}">Sign in</a></li>
+        <li>Upload a photo that contains faces</li>
+        <li>Select a famous painting</li>
+        <li>Select if you want only your face to be styled or if you the background to be styled, but not your face</li>
+        <li>Click on the <a href="{% url 'upload' %}">Get Started</a> to start styling photos</li>
+    </ol>
+{% endblock %}

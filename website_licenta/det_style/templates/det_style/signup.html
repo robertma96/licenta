@@ -1,0 +1,47 @@
+{% extends 'det_style/layout.html' %}
+{% block content %}
+    {% if message %}
+        <div class="alert alert-success">
+            <strong>{{ message }}</strong>
+        </div>
+    {% endif %}
+    {% if success %}
+        <h3>Welcome, {{ user.username }}, {{ success }}</h3>
+    {% endif %}
+    {% if not user.is_authenticated %}
+        {% if form.errors %}
+            {% for field in form %}
+                {% for error in field.errors %}
+                    <div class="alert alert-danger">
+                        <strong>{{ error|escape }}</strong>
+                    </div>
+                {% endfor %}
+            {% endfor %}
+            {% for error in form.non_field_errors %}
+                <div class="alert alert-danger">
+                    <strong>{{ error|escape }}</strong>
+                </div>
+            {% endfor %}
+        {% endif %}
+        <br>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form">
+                {% for field in form %}
+                    <div class="form-group row">
+                        <div class="col-sm-2">
+                            {{ field.label_tag }}
+                        </div>
+                        <div class="col-sm-10">
+                            {{ field }}
+                        </div>
+                        <div class="col-sm-12">
+                            <small class="form-text line-break">{{ field.help_text }}</small>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+    {% endif %}
+{% endblock %}

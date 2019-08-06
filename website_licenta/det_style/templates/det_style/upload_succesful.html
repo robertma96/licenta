@@ -1,0 +1,13 @@
+{% extends 'det_style/layout.html' %}
+{% block content %}
+    {% if styled_image_path %}
+        <div id="img_styled">
+            <img src="{{ styled_image_path }}" class="img-fluid" alt="...">
+        </div>
+        <a href="{{ styled_image_path }}" download>
+            <button class="btn"><i class="fa fa-download"></i> Download</button>
+        </a>
+        <a href="{% url 'upload' %}"><button class="btn"> Try another image </button></a>
+
+    {% endif %}
+{% endblock %}
