@@ -1,0 +1,6 @@
+.idea/
+__pycache__/
+db.sqlite3
+website_licenta/my.cnf
+media/*
+det_style/face_detection_and_styling/training/models/*
