@@ -77,11 +77,11 @@ WSGI_APPLICATION = 'website_licenta.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'licenta',
-        'USER': 'root',
-        'PASSWORD': 'masina',
-        'HOST': 'localhost',
-        'PORT': '3306',
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '',
+        'PORT': '',
     }
 }
 
